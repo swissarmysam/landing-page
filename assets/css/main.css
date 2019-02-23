@@ -1,0 +1,136 @@
+/*************************************
+*  Stylesheet for samrampling.co.uk  *
+**************************************/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+    --text-color: #362D31;
+    --off-white: #F5F5F5;
+    --primary-font: 'Lato';
+    --big-text: 1.9em;
+    --std-text: 1.05em;
+    --sm-text: 0.95em;
+    --block-color: #362D31;
+    --padding: 10px 20px 10px 20px;
+    --margin-header: -27px;
+    --img-height: 240px;
+    --img-top: 50px;
+    --img-bottom: -15px;
+}
+
+* {
+    color: var(--text-color);
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--std-text);
+    background: var(--off-white);
+    text-decoration: none;
+}
+
+body {
+    margin-top: 0;
+}
+
+.message, p {
+    width: 100vw;
+    height: auto;
+    background: palegoldenrod;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.band {
+    height: 6px;
+    width: 100vw;
+    background: #362D31;
+    padding-top: 0;
+}
+
+.title {
+    color: var(--off-white);
+    background-color: var(--block-color);
+    padding: var(--padding);
+}
+
+h2 {
+    font-size: var(--big-text);
+}
+
+h3 {
+    margin-top: var(--margin-header);
+}
+
+img {
+    height: var(--img-height);
+    border-radius: 50%;
+    margin-top: var(--img-top);
+    margin-bottom: var(--img-bottom);
+}
+
+/* img.round {
+    border: solid 6px #362D31; 
+} */
+
+ul {
+    margin-left: -40px;
+   
+}
+
+ul > li {
+    list-style-type: none;
+    text-align: center;
+    padding: 4px;
+    height:2em;
+    font-size: var(--sm-text);
+}
+
+a:hover,
+a:hover > i {
+    padding: 4px 4px 4px 2px;
+    color: var(--off-white);
+    background-color: var(--block-color);
+    z-index: 0;
+    cursor:pointer;
+}
+
+/* Mobile Properties */
+@media (max-width: 500px) {
+    :root {
+        --img-height: 120px;
+        --img-top: 15px;
+        --img-bottom: -10px;
+        --margin-header: -10px;
+        --padding: 5px 10px 5px 10px;
+        --big-text: 1.3em;
+        --std-text: 1em;
+        --sm-text: 0.95em;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .title {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul {
+        margin-left: -30px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 710px) {
+     .title {
+         max-width: 80%;
+     }
+
+      h3 {
+          text-align: center;
+      }
+}
