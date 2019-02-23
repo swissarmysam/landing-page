@@ -30,7 +30,7 @@ body {
     margin-top: 0;
 }
 
-.message, p {
+.message, .message > p {
     width: 100vw;
     height: auto;
     background: palegoldenrod;
@@ -95,6 +95,46 @@ a:hover > i {
     background-color: var(--block-color);
     z-index: 0;
     cursor:pointer;
+}
+
+input, select, textarea {
+    border: 2px solid var(--block-color);
+}
+
+textarea {
+    resize: none;
+}
+
+div.contact {
+    font-size: var(--sm-text);
+    padding: 15px;
+    border: 6px solid var(--block-color);
+    background-color: palegoldenrod;
+    margin-bottom: 25px;
+}
+
+form, p, label  {
+    background-color: palegoldenrod;
+}
+
+button {
+    border: 0;
+    background: var(--block-color);
+    color: var(--off-white);
+    padding: 10px;
+    width: 25%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block
 }
 
 /* Mobile Properties */
