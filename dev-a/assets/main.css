@@ -66,12 +66,12 @@ div.card-wrapper, .card::before {
 
 div.card {
     background-color: #333;
-    /* opacity: 0.9; */
+    opacity: 0.9; 
     width: 70%;
     height: 85%;
     justify-self: center;
     align-self: center;
-    /* box-shadow: rgba(255,255,255, 0.1) 8px 8px 5px; */
+     box-shadow: rgba(255,255,255, 0.1) 8px 8px 5px; 
 }
 
 .card::before {

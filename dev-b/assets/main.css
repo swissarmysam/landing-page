@@ -1,0 +1,328 @@
+/*************************************
+*  Stylesheet for samrampling.me     *
+**************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+
+    --off-white: #F5F5F5;
+    --primary-font: 'Lato';
+    --big-text: 3em;
+    --std-text: 1.05em;
+    --sm-text: 0.95em;
+    --padding: 10px 20px 10px 20px;
+    --margin-header: -27px;
+    --img-height: 240px;
+    --img-top: 50px;
+    --img-bottom: -5px;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--std-text);
+    text-decoration: none; 
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+    background-color: whitesmoke;
+}
+
+.left {
+    grid-area: left;
+    background-color: rgb(43, 128, 226);
+    color: var(--left-text-color);
+    /* box-shadow: 3px 3px 6px 2px hsla(0, 0%, 0%, 0.281); */
+    display: grid;
+    z-index: 1;
+    transition: background-color 600ms;
+}
+
+p {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255,255,255,0.25);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* span#greeting {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+} */
+
+.title, .intro {
+    color: whitesmoke;
+    padding: var(--padding);
+    max-width: 80%;
+    text-align: center;
+}
+
+span#greeting {
+    color: rgba(0,0,0,0.5);
+    /* text-decoration: underline; */
+}
+
+span:hover{
+    cursor: pointer;
+}
+
+h2.title {
+    font-size: var(--big-text);
+}
+
+p.intro {
+    margin-top: var(--margin-header);
+    font-weight: thin;
+    font-size: 1.3em;
+}
+
+img {
+    height: var(--img-height);
+    /*border-radius: 50%;*/
+    margin-top: var(--img-top);
+    margin-bottom: var(--img-bottom);
+}
+
+ img.round {
+    box-shadow: rgba(0,0,0,0.18) 15px 15px 0px 0px;
+} 
+
+ul {
+    margin-left: -40px;
+   
+}
+
+ul > li {
+    list-style-type: none;
+    text-align: center;
+    padding: 4px;
+    height:2em;
+    font-size: var(--sm-text);
+    z-index: 2;
+}
+
+a {
+    text-decoration-style: dotted;
+    color: whitesmoke;
+}
+
+a:hover,
+a:hover > i {
+    cursor:pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block
+}
+
+.right {
+    grid-area: right;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+    grid-auto-flow: dense;
+    margin: 25px 25px 25px 25px;
+}
+
+.panel {
+    display: grid;
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.15);
+}
+
+.project {
+    font-family: var(--primary-font), sans-serif;
+    font-size: 1.95em;
+    font-weight: 700;
+    color: whitesmoke;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+    justify-self: center;
+    align-self: center;
+    transition: transform 300ms;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.overlay:hover {
+    transform: translateY(-15%);
+    transition: transform 300ms;
+    cursor: pointer;
+}
+
+.overlay:hover > span {
+    opacity: 0;
+    transition: opacity 550ms;
+}
+
+.panel1 {
+    background: linear-gradient(135deg, hsl(6, 93%, 71%), hsl(350, 100%, 88%));
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.panel1 > .project:hover::after {
+    white-space: pre;
+    content:'Play Possum showcases a mixture of games, \Astorytelling and transmedia content';
+    font-size: 1.3rem;
+    animation: fade 1s 1;  
+}
+
+.panel2 {
+    background: linear-gradient(135deg, orangered, orange);
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.panel2 > .project:hover::after {
+    white-space: pre;
+    content:'BareBones is a free-for-student deals site';
+    font-size: 1.3rem;
+    animation: fade 1s 1;  
+}
+
+.panel3 {
+    background: linear-gradient(135deg, purple, fuchsia);
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.panel3 > .project:hover::after {
+    white-space: pre;
+    content:'Press Any Key is the premier online \A(and occasionally offline) interactive \Ashowcase event';
+    font-size: 1.3rem;
+    animation: fade 1s 1;  
+}
+
+.panel4 {
+    background: linear-gradient(135deg, navy, skyblue);
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.panel4 > .project:hover::after {
+    white-space: pre;
+    content:'Docket.Page is a general task management tool';
+    font-size: 1.3rem;
+    animation: fade 1s 1;  
+}
+
+.panel5 {
+    background: linear-gradient(135deg, green, yellow);
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.panel5 > .project:hover::after {
+    white-space: pre;
+    content:'BoilerMaker is homage to the noble beer cocktail';
+    font-size: 1.3rem;
+    animation: fade 1s 1;  
+}
+
+.panel6 {
+    background: linear-gradient(135deg, darkred, red);
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.panel6 > .project:hover::after {
+    white-space: pre;
+    content:'Full Stop is a full-featured stop animation tool';
+    font-size: 1.3rem;
+    animation: fade 1s 1;  
+}
+
+/* Mobile Properties */
+@media (max-width: 700px) {
+    :root {
+        --img-height: 120px;
+        --img-top: 15px;
+        --img-bottom: 6px;
+        --margin-header: -10px;
+        --padding: 5px 10px 5px 10px;
+        --big-text: 1.3em;
+        --std-text: 1em;
+        --sm-text: 0.95em;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .title, .intro {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul {
+        margin-left: -30px;
+    }
+
+    img.round {
+        box-shadow: rgba(0,0,0,0.18) 15px 15px 0px 0px;
+    } 
+
+    .wrapper {
+        grid-template-areas: 
+         "left left";
+    }
+    h2.title {
+        font-size: 2.25rem;
+    }
+    p.intro {
+        font-size: 1.25rem;
+    }
+    .right {
+        display: none;
+    }
+    img.round {
+     box-shadow: rgba(0,0,0,0.18) 8px 8px 0px 0px;
+ } 
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+     .title, .intro {
+         max-width: 80%;
+     }
+     h1 {
+        font-size: 3rem;
+    }
+    .right {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
