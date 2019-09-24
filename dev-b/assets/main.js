@@ -9,3 +9,12 @@ function updateColor(){
 }
 
 greeting.addEventListener('click', updateColor);
+
+const panel = document.querySelectorAll('.panel');
+
+function openLink(evt) {
+    const link = evt.currentTarget.dataset.link;
+    window.open(`http://${link}`, '_newtab');
+}
+
+panel.forEach(panel => panel.addEventListener('click', openLink));

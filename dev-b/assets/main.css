@@ -117,7 +117,7 @@ ul > li {
     z-index: 2;
 }
 
-a {
+.intro > a {
     text-decoration-style: dotted;
     color: whitesmoke;
 }
@@ -148,6 +148,7 @@ a:hover > i {
 .panel {
     display: grid;
     box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.15);
+    cursor: pointer;
 }
 
 .project {
@@ -172,17 +173,22 @@ a:hover > i {
 }
 
 .overlay {
+    width: 85%;
     transform: translateY(0);
     opacity: 1;
 }
 
-.overlay:hover {
+.project {
+    line-height: 1.45rem;
+}
+
+.panel:hover > .overlay {
     transform: translateY(-15%);
     transition: transform 300ms;
     cursor: pointer;
 }
 
-.overlay:hover > span {
+.panel:hover > .overlay > span {
     opacity: 0;
     transition: opacity 550ms;
 }
@@ -193,9 +199,9 @@ a:hover > i {
     grid-row: span 1;
 }
 
-.panel1 > .project:hover::after {
-    white-space: pre;
-    content:'Play Possum showcases a mixture of games, \Astorytelling and transmedia content';
+.panel1:hover > .project::after {
+    white-space: pre-wrap;
+    content:'Play Possum showcases a mixture of games, storytelling and transmedia content created by me. Each project on the site has an accompanying write-up on the creative process and technologies used.';
     font-size: 1.3rem;
     animation: fade 1s 1;  
 }
@@ -206,8 +212,8 @@ a:hover > i {
     grid-row: span 1;
 }
 
-.panel2 > .project:hover::after {
-    white-space: pre;
+.panel2:hover > .project::after {
+    white-space: pre-wrap;
     content:'BareBones is a free-for-student deals site';
     font-size: 1.3rem;
     animation: fade 1s 1;  
@@ -219,9 +225,9 @@ a:hover > i {
     grid-row: span 1;
 }
 
-.panel3 > .project:hover::after {
-    white-space: pre;
-    content:'Press Any Key is the premier online \A(and occasionally offline) interactive \Ashowcase event';
+.panel3:hover > .project::after {
+    white-space: pre-wrap;
+    content:'Press Any Key is the premier online (and occasionally offline) interactive showcase event';
     font-size: 1.3rem;
     animation: fade 1s 1;  
 }
@@ -232,8 +238,8 @@ a:hover > i {
     grid-row: span 1;
 }
 
-.panel4 > .project:hover::after {
-    white-space: pre;
+.panel4:hover > .project::after {
+    white-space: pre-wrap;
     content:'Docket.Page is a general task management tool';
     font-size: 1.3rem;
     animation: fade 1s 1;  
@@ -245,8 +251,8 @@ a:hover > i {
     grid-row: span 1;
 }
 
-.panel5 > .project:hover::after {
-    white-space: pre;
+.panel5:hover > .project::after {
+    white-space: pre-wrap;
     content:'BoilerMaker is homage to the noble beer cocktail';
     font-size: 1.3rem;
     animation: fade 1s 1;  
@@ -258,8 +264,8 @@ a:hover > i {
     grid-row: span 1;
 }
 
-.panel6 > .project:hover::after {
-    white-space: pre;
+.panel6:hover > .project::after {
+    white-space: pre-wrap;
     content:'Full Stop is a full-featured stop animation tool';
     font-size: 1.3rem;
     animation: fade 1s 1;  
