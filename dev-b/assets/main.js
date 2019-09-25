@@ -1,3 +1,5 @@
+/* Code for generating random color */
+
 const greeting = document.querySelector('#greeting');
 const left = document.querySelector('.left');
 
@@ -10,11 +12,14 @@ function updateColor(){
 
 greeting.addEventListener('click', updateColor);
 
-const panel = document.querySelectorAll('.panel');
+/* Code for opening panel links in new tab */
+/* @params event */
+
+const panels = document.querySelectorAll('.panel');
 
 function openLink(evt) {
     const link = evt.currentTarget.dataset.link;
-    window.open(`http://${link}`, '_newtab');
+    window.open(`http://${link}`, '_blank');
 }
 
-panel.forEach(panel => panel.addEventListener('click', openLink));
+panels.forEach(panel => panel.addEventListener('click', openLink));
